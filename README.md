@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 dotfiles
 ========
 
@@ -37,3 +38,7 @@ git clone https://UserName@github.com/UserName/dotfiles.git && cd dotfiles && so
 ```
 source ~/dotfiles/bootstrap.sh
 ```
+=======
+# dotfiles
+My dotfiles with inspiration from https://github.com/BradDenver/dotfiles, https://github.com/gf3/dotfiles, https://github.com/mathiasbynens/dotfiles, https://github.com/paulirish/dotfiles
+>>>>>>> 2a11bc369551bccc6dc4da9ca4a2fad9b1f7b913
