@@ -1,0 +1,45 @@
+[user]
+    email = ericsimmerman@gmail.com
+    name = Eric Simmerman
+[alias]
+  st = status
+  ci = commit
+  br = branch
+  co = checkout
+  df = diff
+  lg = log -p
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit
+  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  ls = ls-files
+  gu = remote update
+  cia = !sh -c 'git add . && git commit -a' -
+  difb = !sh -c 'git diff --name-status $1..$2' -
+[core]
+  pager = most +s +'/---'
+[branch]
+  autosetuprebase = always
+[color]
+  ui = auto
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+[color "diff"]
+  whitespace = red reverse
+[core]
+  whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+[apply]
+	whitespace = nowarn
+[push]
+	default = simple
+[credential]
+	helper = osxkeychain
