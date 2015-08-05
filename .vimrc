@@ -8,27 +8,27 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " Vundle installed
-Bundle 'gmarik/vundle'
+ Bundle 'gmarik/vundle'
 "Bundle 'mileszs/ack.vim'
-Bundle 'bling/vim-airline'
+"  Bundle 'bling/vim-airline'
 "Bundle 'vim-scripts/ZoomWin'
-Bundle 'kien/ctrlp.vim'
+" Bundle 'kien/ctrlp.vim'
 "Bundle 'Lokaltog/vim-easymotion'
 "Bundle 'tpope/vim-fugitive'
-Bundle 'scrooloose/nerdtree'
+" Bundle 'scrooloose/nerdtree'
 "Bundle 'SirVer/ultisnips'
 "Bundle 'tpope/vim-surround'
-Bundle 'scrooloose/syntastic'
+" Bundle 'scrooloose/syntastic'
 "Bundle 'scrooloose/nerdcommenter'
-Bundle 'tomtom/tcomment_vim'
+ Bundle 'tomtom/tcomment_vim'
 "Bundle 'tpope/vim-abolish'
 "Bundle 'mattn/emmet-vim'
 "Bundle 'tpope/vim-dispatch'
-Bundle 'godlygeek/tabular'
-Bundle 'taglist.vim'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'marijnh/tern_for_vim'
-Bundle 'mhinz/vim-startify'
+  Bundle 'godlygeek/tabular'
+" Bundle 'taglist.vim'
+"Bundle 'Valloric/YouCompleteMe'
+" Bundle 'marijnh/tern_for_vim'
+" Bundle 'mhinz/vim-startify'
 
 " Syntax
 Bundle 'pangloss/vim-javascript'
@@ -46,19 +46,11 @@ Bundle 'pangloss/vim-javascript'
 "Bundle 'chriskempson/base16-vim'
 "Bundle 'nanotech/jellybeans.vim'
 "Bundle 'morhetz/gruvbox'
-Bundle 'altercation/vim-colors-solarized'
 Bundle 'ap/vim-css-color'
 
 filetype plugin indent on
 syntax enable
 set background=dark
-"let g:solarized_termtrans = 1
-let g:solarized_termcolors=16
-let g:solarized_contrast="high"
-colorscheme solarized
-
-au WinLeave * set nocursorline
-au WinEnter * set cursorline
 
 " recognize .md files as markdown
 au BufRead,BufNewFile *.md set filetype=markdown

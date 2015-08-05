@@ -1,7 +1,31 @@
 # .bashrc
 
 # set bash prompt
-PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\$ '
+function _git_prompt() {
+    local git_status="`git status -unormal 2>&1`"
+    if ! [[ "$git_status" =~ Not\ a\ git\ repo ]]; then
+        if [[ "$git_status" =~ nothing\ to\ commit ]]; then
+            local ansi=42
+        elif [[ "$git_status" =~ nothing\ added\ to\ commit\ but\ untracked\ files\ present ]]; then
+            local ansi=43
+        else
+            local ansi=45
+        fi
+        if [[ "$git_status" =~ On\ branch\ ([^[:space:]]+) ]]; then
+            branch=${BASH_REMATCH[1]}
+            test "$branch" != master || branch=' '
+        else
+            # Detached HEAD.  (branch=HEAD is a faster alternative.)
+            branch="(`git describe --all --contains --abbrev=4 HEAD 2> /dev/null ||
+                echo HEAD`)"
+        fi
+        echo -n '\[\e[0;37;'"$ansi"';1m\]'"$branch"'\[\e[0m\] '
+    fi
+}
+function _prompt_command() {
+    PS1="`_git_prompt`"'[\u@tinkertoys:\w]\$ '
+}
+PROMPT_COMMAND=_prompt_command
 
 # set z.sh - https://github.com/rupa/z
 . $HOME/z/z.sh
@@ -35,8 +59,8 @@ bind 'set completion-ignore-case on'
 # we want tmux to use 256 colors
 export TERM="screen-256color"
 
-# User specific aliases and functions
-
+export LANG=en_US.UTF-8
+export LSCOLORS=gxFxCxDxBxegedabagacad
 
 # set solarized dircolors
 #eval `dircolors dircolors.256dark`
