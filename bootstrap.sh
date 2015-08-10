@@ -5,16 +5,16 @@
 #-----------------------------------------------------------------------------
 
 # Notice title
-notice() { echo  "\033[1;32m=> $1\033[0m"; }
+notice() { echo  "$1"; }
 
 # Error title
-error() { echo "\033[1;31m=> Error: $1\033[0m"; }
+error() { echo "Error: $1"; }
 
 # List item
-c_list() { echo  "  \033[1;32m✔\033[0m $1"; }
+c_list() { echo  " $1"; }
 
 # Error list item
-e_list() { echo  "  \033[1;31m✖\033[0m $1"; }
+e_list() { echo  "  $1"; }
 
 # Check for dependency
 dep() {
