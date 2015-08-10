@@ -62,6 +62,3 @@ export TERM="screen-256color"
 export LANG=en_US.UTF-8
 export LSCOLORS=gxFxCxDxBxegedabagacad
 
-# set solarized dircolors
-#eval `dircolors dircolors.256dark`
-eval `dircolors $HOME/dircolors.ansi-universal`
