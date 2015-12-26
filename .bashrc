@@ -27,9 +27,6 @@ function _prompt_command() {
 }
 PROMPT_COMMAND=_prompt_command
 
-# set z.sh - https://github.com/rupa/z
-. $HOME/z/z.sh
-
 # Source global definitions
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
@@ -61,4 +58,13 @@ export TERM="screen-256color"
 
 export LANG=en_US.UTF-8
 export LSCOLORS=gxFxCxDxBxegedabagacad
+export SVN_EDITOR=vi
+export AWS_CREDENTIAL_FILE=~/.aws.creds
+export QTDIR=/usr/local/qt
+export LD_LIBRARY_PATH=$QTDIR/lib:$LD_LIBRARY_PATH
+export RBENV_BIN=~/.rbenv/bin
+# https://groups.google.com/d/msg/webgen-users/wYYWrwljJ1Y/Q8G4SzG_lEcJ
+export RUBYOPT="-rsyck"
 
+export JAVA_OPTS="-Xms128m -Xmx1024m"
+export MAVEN_OPTS="-Xmx768m -XX:MaxPermSize=512m -Dcom.sun.management.jmxremote "
