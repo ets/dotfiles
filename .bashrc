@@ -68,3 +68,12 @@ export RUBYOPT="-rsyck"
 
 export JAVA_OPTS="-Xms128m -Xmx1024m"
 export MAVEN_OPTS="-Xmx768m -XX:MaxPermSize=512m -Dcom.sun.management.jmxremote "
+
+export NVM_DIR="/Volumes/SolidStorage/Users/ets/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+export PYTHONPATH=/opt/local/Library/Frameworks/Python.framework/Versions/Current/                                                                                                                       
+
+export PATH=$PATH:$HOME/bin:$RBENV_BIN:/opt/local/bin:$PYTHONPATH/bin
+# /usr/local/bin:/usr/local/sbin:~/bin:$QTDIR/bin:$AWS_CLI_BIN
+
