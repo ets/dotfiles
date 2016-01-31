@@ -74,6 +74,6 @@ export NVM_DIR="/Volumes/SolidStorage/Users/ets/.nvm"
 
 export PYTHONPATH=/opt/local/Library/Frameworks/Python.framework/Versions/Current/                                                                                                                       
 
-export PATH=$PATH:$HOME/bin:$RBENV_BIN:/opt/local/bin:$PYTHONPATH/bin
+export PATH=$RBENV_BIN:$PATH:$HOME/bin:/opt/local/bin:$PYTHONPATH/bin
 # /usr/local/bin:/usr/local/sbin:~/bin:$QTDIR/bin:$AWS_CLI_BIN
 
