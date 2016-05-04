@@ -73,6 +73,7 @@ export NVM_DIR="/Volumes/SolidStorage/Users/ets/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 export PYTHONPATH=/opt/local/Library/Frameworks/Python.framework/Versions/Current/                                                                                                                       
+export PIP_REQUIRE_VIRTUALENV=true
 
 export PATH=$RBENV_BIN:$PATH:$HOME/bin:/opt/local/bin:$PYTHONPATH/bin
 # /usr/local/bin:/usr/local/sbin:~/bin:$QTDIR/bin:$AWS_CLI_BIN
