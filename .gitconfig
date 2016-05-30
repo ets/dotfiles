@@ -14,8 +14,6 @@
   gu = remote update
   cia = !sh -c 'git add . && git commit -a' -
   difb = !sh -c 'git diff --name-status $1..$2' -
-[core]
-  pager = most +s +'/---'
 [branch]
   autosetuprebase = always
 [color]
