@@ -63,8 +63,9 @@ export AWS_CREDENTIAL_FILE=~/.aws.creds
 export QTDIR=/usr/local/qt
 export LD_LIBRARY_PATH=$QTDIR/lib:$LD_LIBRARY_PATH
 export RBENV_BIN=~/.rbenv/bin
-# https://groups.google.com/d/msg/webgen-users/wYYWrwljJ1Y/Q8G4SzG_lEcJ
-export RUBYOPT="-rsyck"
+
+# Needed for webgen https://groups.google.com/d/msg/webgen-users/wYYWrwljJ1Y/Q8G4SzG_lEcJ
+#export RUBYOPT="-rsyck"
 
 export JAVA_OPTS="-Xms128m -Xmx1024m"
 export MAVEN_OPTS="-Xmx768m -XX:MaxPermSize=512m -Dcom.sun.management.jmxremote "
@@ -72,9 +73,11 @@ export MAVEN_OPTS="-Xmx768m -XX:MaxPermSize=512m -Dcom.sun.management.jmxremote 
 export NVM_DIR="/Volumes/SolidStorage/Users/ets/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-export PYTHONPATH=/opt/local/Library/Frameworks/Python.framework/Versions/Current/                                                                                                                       
-export PIP_REQUIRE_VIRTUALENV=true
-
-export PATH=$RBENV_BIN:$PATH:$HOME/bin:/opt/local/bin:$PYTHONPATH/bin
-# /usr/local/bin:/usr/local/sbin:~/bin:$QTDIR/bin:$AWS_CLI_BIN
+if [ "$(uname)" == "Darwin" ]; then
+  export PYTHONPATH=/opt/local/Library/Frameworks/Python.framework/Versions/Current/                                                                                                                       
+  export PIP_REQUIRE_VIRTUALENV=true
+  export PATH=$RBENV_BIN:$PATH:$HOME/bin:/opt/local/bin:$PYTHONPATH/bin
+else
+  export PATH=$RBENV_BIN:$PATH:$HOME/bin:/opt/local/bin
+fi
 
