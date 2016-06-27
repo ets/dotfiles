@@ -7,13 +7,7 @@ alias ..='cd ../'
 alias grep='grep --color'                     # show differences in colour
 
 # Host access
-alias atweb='ssh 172.16.34.5'
-alias fgdb2='ssh grid02admin@162.218.139.223'
-alias fgdb='ssh grid02admin@198.90.21.14'
-alias fgaws='ssh ftp.foldergrid.com'
-alias fgaws2='ssh 54.173.122.112'
-alias ap='ssh ets@catprep.com'
-alias bh='ssh lsatexam@lsat-exams.com'
+alias fgaws='ssh foldergrid.com'
 
 # VM
 alias startdocker='boot2docker start; $(boot2docker shellinit)'
