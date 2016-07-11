@@ -65,7 +65,7 @@ set foldmethod=manual
 set showmatch
 set smarttab
 set clipboard=unnamed
-set mouse=a
+set mouse-=a
 set wildignore+=node_modules,javascripts-built,bower_components,test-result
 set ruler
 set wildmenu

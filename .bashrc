@@ -74,10 +74,17 @@ export NVM_DIR="/Volumes/SolidStorage/Users/ets/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 if [ "$(uname)" == "Darwin" ]; then
-  export PYTHONPATH=/opt/local/Library/Frameworks/Python.framework/Versions/Current/                                                                                                                       
+  # Support brew AND macport paths??
+  export PYTHONPATH=/opt/local/Library/Frameworks/Python.framework/Versions/Current
+  if [ ! -e "$PYTHONPATH" ]; then
+    export PYTHONPATH=/usr/local
+  fi
   export PIP_REQUIRE_VIRTUALENV=true
   export PATH=$RBENV_BIN:$PATH:$HOME/bin:/opt/local/bin:$PYTHONPATH/bin
+  # Make use of Virtualenvwrapper
+  export WORKON_HOME=~/.virtualenvs
+  export VIRTUALENVWRAPPER_PYTHON=$PYTHONPATH/bin/python3
+  source /usr/local/bin/virtualenvwrapper.sh
 else
   export PATH=$RBENV_BIN:$PATH:$HOME/bin:/opt/local/bin
 fi
-
