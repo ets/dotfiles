@@ -76,11 +76,12 @@ export NVM_DIR="/Volumes/SolidStorage/Users/ets/.nvm"
 if [ "$(uname)" == "Darwin" ]; then
   # Support brew AND macport paths??
   export PYTHONPATH=/opt/local/bin
+  export POSTGRES_PATH=/opt/local/lib/postgresql95/bin/
   if [ ! -e "$PYTHONPATH/python3" ]; then
     export PYTHONPATH=/usr/local/bin
   fi
   export PIP_REQUIRE_VIRTUALENV=true
-  export PATH=$RBENV_BIN:$HOME/bin:/opt/local/bin:$PYTHONPATH:$PATH
+  export PATH=$RBENV_BIN:$HOME/bin:/opt/local/bin:$PYTHONPATH:$PATH:$POSTGRES_PATH
   # Make use of Virtualenvwrapper
   export WORKON_HOME=~/.virtualenvs
   export VIRTUALENVWRAPPER_PYTHON=$PYTHONPATH/python3
