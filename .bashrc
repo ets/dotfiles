@@ -64,6 +64,9 @@ export QTDIR=/usr/local/qt
 export LD_LIBRARY_PATH=$QTDIR/lib:$LD_LIBRARY_PATH
 export RBENV_BIN=~/.rbenv/bin
 
+# Needed for webgen https://groups.google.com/d/msg/webgen-users/wYYWrwljJ1Y/Q8G4SzG_lEcJ
+#export RUBYOPT="-rsyck"
+
 export JAVA_OPTS="-Xms128m -Xmx1024m"
 export MAVEN_OPTS="-Xmx768m -XX:MaxPermSize=512m -Dcom.sun.management.jmxremote "
 
@@ -84,7 +87,7 @@ if [ "$(uname)" == "Darwin" ]; then
   export VIRTUALENVWRAPPER_PYTHON=$PYTHONPATH/python3
   if [ -e "/usr/local/bin/virtualenvwrapper.sh" ]; then
     source /usr/local/bin/virtualenvwrapper.sh
-  else
+  elif [ -e "/opt/local/Library/Frameworks/Python.framework/Versions/Current/bin/virtualenvwrapper.sh" ]; then
     source /opt/local/Library/Frameworks/Python.framework/Versions/Current/bin/virtualenvwrapper.sh
   fi
 else
