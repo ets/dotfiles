@@ -24,6 +24,9 @@ function _git_prompt() {
 }
 function _prompt_command() {
     PS1="`_git_prompt`"'[\u@tinkertoys:\w]\$ '
+    if [ -n "$VIRTUAL_ENV" ]; then
+      PS1="(`basename \"$VIRTUAL_ENV\"`) $PS1"
+    fi
 }
 PROMPT_COMMAND=_prompt_command
 
