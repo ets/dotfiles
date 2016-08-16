@@ -7,3 +7,4 @@ cd atom
 script/build # Creates application at /Applications/Atom.app
 apm install file-watcher
 apm install wordcount
+apm install atom-django
