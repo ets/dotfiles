@@ -18,6 +18,7 @@ My bootstrap.sh script is based on [Gianni Chiappettas](https://github.com/gf3/d
 * creates `$HOME/.vim/tmp` & `$HOME/.vim/bundle` if they dont already exist
 * installs [Vundle](https://github.com/gmarik/Vundle.vim) if not installed already
 * installs/updates Vim plugins via Vundle  
+* installs rbenv if not already installed
 
 The main differences from Giannis script is that the `$HOME/.vim/tmp` & `$HOME/.vim/bundle` folders are not removed and recreated and that Vim plugins are installed via Vundle rather than submodules
 

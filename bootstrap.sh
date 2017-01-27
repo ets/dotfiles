@@ -141,6 +141,11 @@ fi
 vim +PluginInstall +qall
 notice "vim plugins installed via vundle"
 
+# install rbenv if not already there
+if [ ! -d $HOME/.rbenv ]; then
+  git clone https://github.com/rbenv/rbenv.git $HOME/.rbenv
+  export PATH="$HOME/.rbenv/bin:$PATH"
+fi
 
 #-----------------------------------------------------------------------------
 # Finished
