@@ -12,6 +12,7 @@ apm install atom-django
 apm install sublime-style-column-selection
 apm install language-docker
 apm install go-plus
+apm install go-rename
 apm install vim-mode-plus
 apm install file-icons
 apm install dash
