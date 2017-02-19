@@ -1,0 +1,16 @@
+'.source.go':
+    'return nil and error':
+      'prefix': 'rne'
+      'body': 'return nil, err'
+
+    'return false and error':
+      'prefix': 'rfe'
+      'body': 'return false, err'
+
+    'Return True and Nil':
+      'prefix': 'rte'
+      'body': 'return true, nil'
+
+    'Import logrus':
+      'prefix': 'logrus'
+      'body': 'log "github.com/Sirupsen/logrus"'
