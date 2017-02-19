@@ -8,6 +8,7 @@ My dotfiles with inspiration from https://github.com/BradDenver/dotfiles, https:
 * bc (I had to install via `sudo yum install bc` on my CentOS 6.5 devbox)
 * Git
 * Vim
+* (optional) Node for installatom.sh 
 
 ## Bootstrapper
 My bootstrap.sh script is based on [Gianni Chiappettas](https://github.com/gf3/dotfiles) excellent setup. It performs the following actions:

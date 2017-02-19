@@ -71,11 +71,16 @@ export RBENV_BIN=~/.rbenv/bin
 #export RUBYOPT="-rsyck"
 
 export JAVA_OPTS="-Xms128m -Xmx1024m"
-export MAVEN_OPTS="-Xmx768m -XX:MaxPermSize=512m -Dcom.sun.management.jmxremote "
+export MAVEN_OPTS="-Xmx768m -Dcom.sun.management.jmxremote "
+export GOPATH=$HOME/golang
+[[ ! -d $GOPATH ]] && mkdir -p $GOPATH; mkdir -p $GOPATH/src/github.com/$USER
+export GOROOT=/usr/local/opt/go/libexec
 
 export NVM_DIR="/Volumes/SolidStorage/Users/ets/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
 if [ "$(uname)" == "Darwin" ]; then
   # Support brew AND macport paths??
   export PYTHONPATH=/opt/local/bin
