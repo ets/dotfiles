@@ -90,9 +90,10 @@ if [ "$(uname)" == "Darwin" ]; then
   fi
   export PIP_REQUIRE_VIRTUALENV=true
   export PATH=$RBENV_BIN:$HOME/bin:/opt/local/bin:$PYTHONPATH:$PATH:$POSTGRES_PATH
-  # Make use of Virtualenvwrapper
+  # Make use of Virtualenvwrapper for python2
+  # for python 36 we now use "python3 -m venv yourenv" to setup pip sandbox instead of virtualenv
   export WORKON_HOME=~/.virtualenvs
-  export VIRTUALENVWRAPPER_PYTHON=$PYTHONPATH/python3
+  export VIRTUALENVWRAPPER_PYTHON=$PYTHONPATH/python2.7
   if [ -e "/usr/local/bin/virtualenvwrapper.sh" ]; then
     source /usr/local/bin/virtualenvwrapper.sh
   elif [ -e "/opt/local/Library/Frameworks/Python.framework/Versions/Current/bin/virtualenvwrapper.sh" ]; then
