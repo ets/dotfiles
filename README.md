@@ -9,6 +9,7 @@ My dotfiles with inspiration from https://github.com/BradDenver/dotfiles, https:
 * Git
 * Vim
 * (optional) Node for installatom.sh 
+* current environment expects python2.7 with virtualenv2.7 and python3 without virtualenv
 
 ## Bootstrapper
 My bootstrap.sh script is based on [Gianni Chiappettas](https://github.com/gf3/dotfiles) excellent setup. It performs the following actions:
