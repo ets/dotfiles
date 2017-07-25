@@ -10,7 +10,10 @@ alias grep='grep --color'                     # show differences in colour
 alias fgaws='ssh foldergrid.com'
 
 # VM
-alias killdocker='docker stop $(docker ps -a -q); docker rm $(docker ps -a -q);'
+alias docker_kill='docker kill $(docker ps -q)'
+alias docker_clean_images='docker rmi $(docker images -a --filter=dangling=true -q)'
+alias docker_clean_ps='docker rm $(docker ps --filter=status=exited --filter=status=created -q)'
+alias docker_clean_all_images='docker rmi $(docker images -a -q)'
 
 # DEV
 alias mvn-debug='export MAVEN_OPTS="-Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,address=8000,server=y,suspend=y"'
