@@ -17,7 +17,6 @@ apm install sublime-style-column-selection
 apm install language-docker
 apm install go-plus
 apm install go-rename
-# no likey apm install vim-mode-plus
 apm install file-icons
 apm install dash
 apm install monokai-seti
