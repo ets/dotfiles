@@ -86,4 +86,4 @@ export PIP_REQUIRE_VIRTUALENV=true
 
 if [ "$(uname)" == "Darwin" ]; then
   echo "No OS X specific setup"
-else
+fi
