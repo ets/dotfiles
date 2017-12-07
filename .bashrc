@@ -85,5 +85,5 @@ export PIP_REQUIRE_VIRTUALENV=true
 # for python 3 we now use "python3 -m venv yourenv" to setup pip sandbox instead of virtualenv <https://docs.python.org/3/library/venv.html>
 
 if [ "$(uname)" == "Darwin" ]; then
-  echo "No OS X specific setup"
+  #
 fi
