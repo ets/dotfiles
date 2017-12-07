@@ -10,8 +10,6 @@ alias grep='grep --color'                     # show differences in colour
 alias fgaws='ssh foldergrid.com'
 
 # VM
-alias startdocker='boot2docker start; $(boot2docker shellinit)'
-alias stopdocker='boot2docker stop'
 alias killdocker='docker stop $(docker ps -a -q); docker rm $(docker ps -a -q);'
 
 # DEV

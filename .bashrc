@@ -76,29 +76,14 @@ export GOPATH=$HOME/golang
 [[ ! -d $GOPATH ]] && mkdir -p $GOPATH; mkdir -p $GOPATH/src/github.com/$USER
 export GOROOT=/usr/local/opt/go/libexec
 
-export NVM_DIR="/Volumes/SolidStorage/Users/ets/.nvm"
+export NVM_DIR="~/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$GOROOT/bin
+export PATH=$HOME/bin:/usr/local/bin:$PATH:$RBENV_BIN:$GOPATH/bin:$GOROOT/bin
+
+export PIP_REQUIRE_VIRTUALENV=true
+# for python 3 we now use "python3 -m venv yourenv" to setup pip sandbox instead of virtualenv <https://docs.python.org/3/library/venv.html>
+
 if [ "$(uname)" == "Darwin" ]; then
-  # Support brew AND macport paths??
-  export PYTHONPATH=/opt/local/bin
-  export POSTGRES_PATH=/opt/local/lib/postgresql95/bin/
-  if [ ! -e "$PYTHONPATH/python3" ]; then
-    export PYTHONPATH=/usr/local/bin
-  fi
-  export PIP_REQUIRE_VIRTUALENV=true
-  export PATH=$RBENV_BIN:$HOME/bin:/opt/local/bin:$PYTHONPATH:$PATH:$POSTGRES_PATH
-  # Make use of Virtualenvwrapper for python2
-  # for python 36 we now use "python3 -m venv yourenv" to setup pip sandbox instead of virtualenv
-  export WORKON_HOME=~/.virtualenvs
-  export VIRTUALENVWRAPPER_PYTHON=$PYTHONPATH/python2.7
-  if [ -e "/usr/local/bin/virtualenvwrapper.sh" ]; then
-    source /usr/local/bin/virtualenvwrapper.sh
-  elif [ -e "/opt/local/Library/Frameworks/Python.framework/Versions/Current/bin/virtualenvwrapper.sh" ]; then
-    source /opt/local/Library/Frameworks/Python.framework/Versions/Current/bin/virtualenvwrapper.sh
-  fi
+  # OS X specific setup
 else
-  export PATH=$RBENV_BIN:$PATH:$HOME/bin:/opt/local/bin
-fi

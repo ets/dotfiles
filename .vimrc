@@ -9,43 +9,13 @@ call vundle#rc()
 
 " Vundle installed
  Bundle 'gmarik/vundle'
-"Bundle 'mileszs/ack.vim'
-"  Bundle 'bling/vim-airline'
-"Bundle 'vim-scripts/ZoomWin'
-" Bundle 'kien/ctrlp.vim'
-"Bundle 'Lokaltog/vim-easymotion'
-"Bundle 'tpope/vim-fugitive'
-" Bundle 'scrooloose/nerdtree'
-"Bundle 'SirVer/ultisnips'
-"Bundle 'tpope/vim-surround'
-" Bundle 'scrooloose/syntastic'
-"Bundle 'scrooloose/nerdcommenter'
  Bundle 'tomtom/tcomment_vim'
-"Bundle 'tpope/vim-abolish'
-"Bundle 'mattn/emmet-vim'
-"Bundle 'tpope/vim-dispatch'
-  Bundle 'godlygeek/tabular'
-" Bundle 'taglist.vim'
-"Bundle 'Valloric/YouCompleteMe'
-" Bundle 'marijnh/tern_for_vim'
-" Bundle 'mhinz/vim-startify'
+ Bundle 'godlygeek/tabular'
 
 " Syntax
 Bundle 'pangloss/vim-javascript'
-"Bundle 'alunny/pegjs-vim'
-"Bundle 'nono/vim-handlebars'
-"Bundle 'wavded/vim-stylus'
-"Bundle 'fsouza/go.vim'
-"Bundle 'kchmck/vim-coffee-script'
-"Bundle 'digitaltoad/vim-jade'
-"Bundle 'wting/rust.vim'
-"Bundle 'guns/vim-clojure-static'
 
 " Color Schemes
-"Bundle 'jaywilliams/vim-vwilight'
-"Bundle 'chriskempson/base16-vim'
-"Bundle 'nanotech/jellybeans.vim'
-"Bundle 'morhetz/gruvbox'
 Bundle 'ap/vim-css-color'
 
 filetype plugin indent on
