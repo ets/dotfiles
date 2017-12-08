@@ -66,7 +66,7 @@ in_array() {
 backupdir="$HOME/.dotfiles-backup/$(date "+%Y%m%d%H%M.%S")"
 dependencies=(git vim)
 # .vim is excluded so that swp files, vundle etc are not lost
-excluded=(. .. .git .gitignore .gitmodules bootstrap.sh Gemfile Gemfile.lock Rakefile README.md .vim)
+excluded=(. .. .git .gitignore .gitmodules bootstrap.sh Gemfile Gemfile.lock Rakefile README.md .vim .idea *.iml)
 
 
 #-----------------------------------------------------------------------------
