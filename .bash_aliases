@@ -15,7 +15,6 @@ alias killdocker='docker stop $(docker ps -a -q); docker rm $(docker ps -a -q);'
 # DEV
 alias mvn-debug='export MAVEN_OPTS="-Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,address=8000,server=y,suspend=y"'
 alias killsvn='find . -name .svn -print0 | xargs -0 rm -rf'
-alias reset-openwith='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -f -v -all u,s,l'
 alias mysqlstart='sudo /opt/local/lib/mysql55/bin/mysqld_safe &'
 alias mysqlstop='/opt/local/lib/mysql55/bin/mysqladmin -p shutdown'
 alias checkjs="find . -name '*.js' -exec ~/bin/checkForJsErrors.sh {} \;"
