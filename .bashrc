@@ -67,7 +67,6 @@ export QTDIR=/usr/local/qt
 export LD_LIBRARY_PATH=$QTDIR/lib:$LD_LIBRARY_PATH
 
 # Brew installed rbenv replacing source installed
-#eval "$(rbenv init -)"
 export RBENV_BIN=~/.rbenv/bin
 # Needed for webgen https://groups.google.com/d/msg/webgen-users/wYYWrwljJ1Y/Q8G4SzG_lEcJ
 #export RUBYOPT="-rsyck"
