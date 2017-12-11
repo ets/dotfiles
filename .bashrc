@@ -65,10 +65,10 @@ export SVN_EDITOR=vi
 export AWS_CREDENTIAL_FILE=~/.aws.creds
 export QTDIR=/usr/local/qt
 export LD_LIBRARY_PATH=$QTDIR/lib:$LD_LIBRARY_PATH
+
 # Brew installed rbenv replacing source installed
 #eval "$(rbenv init -)"
 export RBENV_BIN=~/.rbenv/bin
-
 # Needed for webgen https://groups.google.com/d/msg/webgen-users/wYYWrwljJ1Y/Q8G4SzG_lEcJ
 #export RUBYOPT="-rsyck"
 
@@ -81,7 +81,7 @@ export GOROOT=/usr/local/opt/go/libexec
 export NVM_DIR="~/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-export PATH=$HOME/bin:/usr/local/bin:$PATH:$$RBENV_BIN:GOPATH/bin:$GOROOT/bin
+export PATH=$HOME/bin:/usr/local/bin:$RBENV_BIN:$PATH:GOPATH/bin:$GOROOT/bin
 
 export PIP_REQUIRE_VIRTUALENV=true
 # for python 3 we now use "python3 -m venv yourenv" to setup pip sandbox instead of virtualenv <https://docs.python.org/3/library/venv.html>
