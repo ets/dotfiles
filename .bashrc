@@ -62,7 +62,6 @@ export TERM="screen-256color"
 export LANG=en_US.UTF-8
 export LSCOLORS=gxFxCxDxBxegedabagacad
 export SVN_EDITOR=vi
-export AWS_CREDENTIAL_FILE=~/.aws.creds
 export QTDIR=/usr/local/qt
 export LD_LIBRARY_PATH=$QTDIR/lib:$LD_LIBRARY_PATH
 
