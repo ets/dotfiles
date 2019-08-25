@@ -70,6 +70,8 @@ export RBENV_BIN=~/.rbenv/bin
 # Needed for webgen https://groups.google.com/d/msg/webgen-users/wYYWrwljJ1Y/Q8G4SzG_lEcJ
 #export RUBYOPT="-rsyck"
 
+export AWS_DEFAULT_PROFILE=bitacuity
+
 export JAVA_OPTS="-Xms128m -Xmx1024m"
 export MAVEN_OPTS="-Xmx768m -Dcom.sun.management.jmxremote "
 export GOPATH=$HOME/golang
@@ -84,3 +86,13 @@ export PATH=$HOME/bin:/usr/local/bin:$RBENV_BIN:$PATH:GOPATH/bin:$GOROOT/bin
 #export PIP_REQUIRE_VIRTUALENV=true
 # for python 3 we now use "python3 -m venv yourenv" to setup pip sandbox instead of virtualenv <https://docs.python.org/3/library/venv.html>
 
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.bash ] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.bash
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash ] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.bash ] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.bash
